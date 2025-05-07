@@ -1,0 +1,20 @@
+<h2>Bem-vindo <%= user.name %></h2>
+<p>Email: <%= user.email %></p>
+<p>Provider: <%= user.provider %></p>
+<p>Role: <%= user.role %></p>
+
+<h3>Funcionalidades disponíveis:</h3>
+<ul>
+  <% permissions.forEach(p => { %>
+    <li><button><%= p %></button></li>
+  <% }); %>
+</ul>
+
+<% if (user.role === 'ADMIN') { %>
+  <h3>Lista de usuários:</h3>
+  <ul>
+    <% users.forEach(u => { %>
+      <li><%= u.name %> (<%= u.email %>) - <%= u.role %></li>
+    <% }) %>
+  </ul>
+<% } %>
