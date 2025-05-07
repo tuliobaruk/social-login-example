@@ -2,7 +2,7 @@ import { PrismaClient, Role } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-const ADMIN_EMAIL = 'admin@admin.com';
+const ADMIN_EMAIL = 'seuemail@gmail.com';
 
 export const findOrCreateUser = async (profile: any) => {
   const id = `${profile.provider}-${profile.id}`;

@@ -40,5 +40,15 @@ app.get('/dashboard', async (req, res) => {
   res.render('dashboard', { user, permissions, users });
 });
 
+app.get('/logout', (req, res) => {
+    req.logout((err) => {
+      if (err) {
+        console.error(err);
+      }
+      res.redirect('/');
+    });
+  });
+
+
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));

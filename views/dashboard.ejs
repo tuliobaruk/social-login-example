@@ -3,6 +3,11 @@
 <p>Provider: <%= user.provider %></p>
 <p>Role: <%= user.role %></p>
 
+<form action="/logout" method="get">
+    <button type="submit">Logout</button>
+  </form>
+
+
 <h3>Funcionalidades disponíveis:</h3>
 <ul>
   <% permissions.forEach(p => { %>
